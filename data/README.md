@@ -4,11 +4,21 @@
 
 ## 文件说明
 
-| 文件 | 典籍 | 条数 | 来源 |
+| 文件 | 典籍 | 条数 | 状态 |
 |------|------|------|------|
-| lunyu.json | 论语 | 512 | chinese-poetry |
-| zhouyi.json | 周易 | 514 | freizl/yijing |
-| daodejing.json | 道德经 | 81 | hanzhaodeng/chinese-ancient-text |
+| daodejing.json | 道德经 | 81 | ✅ 已入库 |
+| lunyu.json | 论语 | 512 | 运行脚本生成 |
+| zhouyi.json | 周易 | 514 | 运行脚本生成 |
+
+## 一键生成全部数据
+
+在 `data/` 目录下执行：
+
+```bash
+python3 convert_classics.py
+```
+
+会自动从开源仓库下载并转换成统一格式。
 
 ## 数据格式
 
@@ -21,6 +31,12 @@
   "title": "章节/篇名"
 }
 ```
+
+## 数据来源
+
+- 论语：chinese-poetry/chinese-poetry
+- 周易：freizl/yijing
+- 道德经：hanzhaodeng/chinese-ancient-text
 
 ## 使用注意
 
